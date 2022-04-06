@@ -30,14 +30,14 @@ Para poder crear una clase abstracta se requiere asignar la palabra clave 'abstr
 
 ### Autocarga(autoload)) de clases y nombres de espacio(namespaces) con PHP
 
-#### Autocarga(autoloading)[https://www.php.net/manual/es/language.oop5.autoload.php](Mayor información áca)
+#### Autocarga(autoloading)[Mayor información áca](https://www.php.net/manual/es/language.oop5.autoload.php)
 La autocarga en PHP sugerida como buena practica permite mantener un codigo mas limpio y organizado mediante la carga automatica de clases. Es buena practica guardar las clases en archivos separados.
 
 Consiste en crear una función __autoload() en el arranque de la aplicación para lo cual cuando se requiera llamar para instanciar una clase la función será llamada;la cual buscará y localizará el archivo de la clase que se esta llamando.Esta última quizás puedan llegar a ser obsoleta con el tiempo.
 
 Existe una manera mas flexible usando la función spl_autoload_register(); éste acepta como parámetro una función ´´´callable´´´ que permite definir una logica para la carga de clases.
 
-#### Nombres de espacio(namespaces)[https://www.php.net/manual/es/language.namespaces.basics.php](Mayor información áca)
+#### Nombres de espacio(namespaces)[Mayor información áca](https://www.php.net/manual/es/language.namespaces.basics.php)
 
 
 
