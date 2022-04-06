@@ -20,3 +20,12 @@ Para poder acceder a dichos metodos y/o propiedades se debe usar la palabra rese
 
 Existe el concepto de clases abstractas; este hace referencia a clases que no representan un objeto imaginable y/o concreto de la vida real;por ejemplo: unidad, ser.
 Para poder crear una clase abstracta se requiere asignar la palabra clave 'abstract' previo al nombramiento de la clase.
+
+### Interfaces y polimorfismo
+
+* Diferencias entre interfaz y clase abstracta:
+1. La interfaz es un contrato, no tiene código; es decir, para que una mesa sea una mesa debe tener por lo menos las caracteristicas de una base, numero de patas.
+´´´La intefaz define QUE se construye´´´
+2. La clase abstracta responde a la pregunta de ´´´COMO se implementan los métodos´´´.
+
+
