@@ -1,0 +1,20 @@
+{
+    "name": "juan/opp",
+    "description": "Object oriented programming course",
+    "type": "project",
+    "license": "MIT",
+    "autoload": {
+        "files": ["src/helpers.php"],
+        "psr-4": {
+            "Juan\\Opp\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Juan",
+            "email": "camilo.murcia.pimentel@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {}
+}

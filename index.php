@@ -19,7 +19,7 @@
     });
 
     // instancias de las clases
-    $prueba = new Warrior();     //'Juan' hace parte del directorio de busqueda?
+    // $prueba = new Warrior(); => Warrior no existe
     $armor = new BronzeArmor();
     $ramm = new Soldier('Ramm');
     $camilo = new Archer('camilo');
