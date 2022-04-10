@@ -28,21 +28,28 @@ Para poder crear una clase abstracta se requiere asignar la palabra clave 'abstr
 ´´´La intefaz define QUE se construye´´´
 2. La clase abstracta responde a la pregunta de ´´´COMO se implementan los métodos´´´.
 
-### Autocarga(autoload)) de clases y nombres de espacio(namespaces) con PHP
-
-<<<<<<< HEAD
-#### Autocarga(autoloading)[https://www.php.net/manual/es/language.oop5.autoload.php](Mayor información áca)
-La autocarga en PHP sugerida como buena practica permite mantener un codigo mas limpio y organizado mediante la carga automatica de clases e interfaces. Es buena practica guardar las clases en archivos separados.
-=======
 #### Autocarga(autoloading)[Mayor información áca](https://www.php.net/manual/es/language.oop5.autoload.php)
 La autocarga en PHP sugerida como buena practica permite mantener un codigo mas limpio y organizado mediante la carga automatica de clases. Es buena practica guardar las clases en archivos separados.
->>>>>>> 3549f4df346da95b05bd1a4ae88d1aec00b6570b
 
 Consiste en crear una función __autoload() en el arranque de la aplicación para lo cual cuando se requiera llamar para instanciar una clase la función será llamada;la cual buscará y localizará el archivo de la clase que se esta llamando.Esta última es obsoleta a partir de PHP 7.2.0
 
 Existe una manera mas flexible usando la función spl_autoload_register(); éste acepta como parámetro una función ´´´callable´´´ que permite definir una logica para la carga de clases.
 
 #### Nombres de espacio(namespaces)[Mayor información áca](https://www.php.net/manual/es/language.namespaces.basics.php)
+
+### Composer y PSR-4
+* Composer
+Es un administrador de dependencia para PHP, similiar a NPM en node y Bundler en Ruby. Es la solución ideal para descargar, instalar y actualizar dependencias y librerias en proyectos que se vayan a realizar.Composer se encargar de gestionar las librerias por proyectos sin embargo puede aplicarse de manera global con el comando ````global````.
+* PSR-4
+La recomendación estandar de PHP sirve para la estandarizar conceptos usados en POO(), permite a) la interoperabilidad:es una caracteristica del sistema al interatuar con otro sistema, b) proporciona una base tecnica común para implementar conceptos probados para practicas de programación.
+Existen alrededor de 20 PSR's, particularmente se abordará el PSR-4 que consiste en la ````especificación para clases de carga automatica desde rutas de archivo.Esta recomesación también expobe donde se colocan los archivos que se cargarán automaticamente de acuerdo con la especificación.```` Para ampliación del contenido consulte [la documentación oficial PSR](https://www.php-fig.org/psr/psr-4/)
+
+
+
+
+
+
+
 
 
 
