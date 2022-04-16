@@ -1,4 +1,5 @@
 <?php
+    
     namespace Juan;
     
     class Soldier extends Unity
