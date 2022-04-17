@@ -2,14 +2,24 @@
 
     namespace Juan;
 
-    abstract class Unity
+    class Unity
     {
         protected $hp = 40;
         protected $name;
+        protected $armor;
+        protected $weapon;
+        protected $damage = 10; 
 
-        public function __construct($name)
+
+        public function __construct($name, Weapon $weapon)
         {
             $this->name = $name;
+            $this->weapon = $weapon;
+        }
+
+        public function setArmor(Armor $armor = null)
+        {
+            $this->armor = $armor;
         }
 
         public function getName()
@@ -27,7 +37,17 @@
             show("{$this->name} camina hacia $direction");
         }
 
-        abstract public function attack(Unity $opponent);
+        public function attack(Unity $opponent)
+        {
+            show($this->weapon->getDescription($this, $opponent));
+
+            $opponent->takeDamage($this->getDamage());
+        }
+
+        public function getDamage()
+        {
+            return $this->damage;
+        }
 
         public function takeDamage($damage)
         {
@@ -47,6 +67,9 @@
 
         protected function absorbDamage($damage)
         {
+            if($this->armor){
+                $damage = $this->armor->absorbDamage($damage);
+            }
             return $damage;
         }
     }
