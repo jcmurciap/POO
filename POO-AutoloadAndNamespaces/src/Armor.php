@@ -3,5 +3,5 @@
     
     interface Armor
     {
-        public function absorbDamage($damage);
+        public function absorbDamage(Attack $attack);
     }

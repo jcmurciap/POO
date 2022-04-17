@@ -39,9 +39,10 @@
 
         public function attack(Unity $opponent)
         {
-            show($this->weapon->getDescription($this, $opponent));
+            $attack = $this->weapon->createAttack(); // attack es de tipo Attack
+            show($attack->getDescription($this, $opponent)); //por ende puede acceder a getDescription()... 
 
-            $opponent->takeDamage($this->getDamage());
+            $opponent->takeDamage($attack);
         }
 
         public function getDamage()
@@ -49,9 +50,9 @@
             return $this->damage;
         }
 
-        public function takeDamage($damage)
+        public function takeDamage(Attack $attack)
         {
-            $this->hp = $this->hp - $this->absorbDamage($damage);
+            $this->hp = $this->hp - $this->absorbDamage($attack);
             show("{$this->name} ahora tiene {$this->hp} puntos de vida");
 
             if($this->hp <= 0){
@@ -65,11 +66,12 @@
             exit();
         }
 
-        protected function absorbDamage($damage)
+        protected function absorbDamage(Attack $attack)
         {
             if($this->armor){
-                $damage = $this->armor->absorbDamage($damage);
+                return $damage = $this->armor->absorbDamage($attack);
             }
-            return $damage;
+            
+            return $attack->getDamage();
         }
     }

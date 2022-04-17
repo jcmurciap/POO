@@ -4,8 +4,8 @@
     
     class GoldArmor implements Armor
     {
-        public function absorbDamage($damage)
+        public function absorbDamage(Attack $attack)
         {
-            return $damage*3;
+            return $attack->getDamage()/3;
         }
     }
