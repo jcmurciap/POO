@@ -1,17 +1,12 @@
 <?php
     
-    namespace Juan;
-    use Juan\Armor;
+namespace Juan;
+use Juan\Armor;
 
-    class SilverArmor implements Armor
+class SilverArmor extends Armor
+{
+    public function absorbPhysicalDamage(Attack $attack)
     {
-        public function absorbDamage(Attack $attack)
-        {
-            if($attack->isPhysical()) {
-                return $attack->getDamage()/2;
-            }
-
-            return $attack->getDamage();
-            
-        }
+        return $attack->getDamage();
     }
+}

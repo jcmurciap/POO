@@ -1,11 +1,11 @@
 <?php
     
-    namespace Juan;
+namespace Juan;
     
-    class GoldArmor implements Armor
+class GoldArmor extends Armor
+{
+    public function absorbDamage(Attack $attack)
     {
-        public function absorbDamage(Attack $attack)
-        {
-            return $attack->getDamage()/3;
-        }
+        return $attack->getDamage()/3;
     }
+}

@@ -1,11 +1,11 @@
 <?php
     
-    namespace Juan;
+namespace Juan;
     
-    class BronzeArmor implements Armor
+class BronzeArmor extends Armor
+{
+    public function absorbDamage(Attack $attack)
     {
-        public function absorbDamage(Attack $attack)
-        {
-            return $attack->getDamage()/1.3;
-        }
+        return $attack->getDamage()/1.3;
     }
+}
