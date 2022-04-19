@@ -32,10 +32,9 @@ class Attack
     
     public function getDescription(Unity $attacker, Unity $opponent)
     {
-        return str_replace(
-            [':unit', ':opponent'],
-            [$attacker->getName(), $opponent->getName()],
-            $this->description
-        );   
+        return Translator::get($this->description, [
+            'unit' => $attacker->getName(),
+            'opponent' => $opponent->getName(),
+        ]);  
     }
 }

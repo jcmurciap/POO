@@ -52,16 +52,7 @@ Existen alrededor de 20 PSR's, particularmente se abordará el PSR-4 que consist
 # Métodos y propiedades estáticas y constantes
 
 ### Métodos y propiedades estáticos
-
-
-
-
-
-
-
-
-
-
-
-
+* Una propiedad estática es aquella que hace parte de la clase y no del objeto que la instancia; por tal motivo deja de poderse llamar usando el keyword ````this```` a tener que llamarse ````static::nombrePropiedad````.
+Al instanciarse por fuera de la clase que la contiene pasa a hacer parte de manera global,de la clase del programa, ya no hace parte de cada instancia de cada objeto.
+* Un método estático se declara usando la palabra reservada ````static```` antes de la palabra reservada ````function````. Para acceder a este metodo NO hay necesidad de instanciar la clase contendora.
 
