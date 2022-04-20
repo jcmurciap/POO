@@ -1,4 +1,4 @@
-# Programación orientada a objetos(POO)
+# 1. Programación orientada a objetos(POO)
 ### Encapsulamiento
 Ocultar y proteger información
 
@@ -49,10 +49,39 @@ Son recomendaciones estandar de PHP para estandarizar conceptos usados en POO();
 Existen alrededor de 20 PSR's, particularmente se abordará el PSR-4 que consiste en la ````especificación para clases de carga automática desde rutas de archivo.Esta recomendación también expone donde se colocan los archivos que se cargarán automáticamente de acuerdo con la especificación.```` Para ampliación del contenido consulte [la documentación oficial PSR](https://www.php-fig.org/psr/psr-4/)
 
 
-# Métodos y propiedades estáticas y constantes
+# 2. Métodos y propiedades estáticas y constantes
 
 ### Métodos y propiedades estáticos
 * Una propiedad estática es aquella que hace parte de la clase y no del objeto que la instancia; por tal motivo deja de poderse llamar usando el keyword ````this```` a tener que llamarse ````static::nombrePropiedad````.
 Al instanciarse por fuera de la clase que la contiene pasa a hacer parte de manera global,de la clase del programa, ya no hace parte de cada instancia de cada objeto.
 * Un método estático se declara usando la palabra reservada ````static```` antes de la palabra reservada ````function````. Para acceder a este metodo NO hay necesidad de instanciar la clase contendora.
 
+### Constructores semánticos (named constructors) e interfaces fluidas (fluent interfaces)
+* Para visualizar los constructores semánticos se requiere crear un método estático que cree y retorne una nueva instancia de clase; en el ejemplo a continuación el constructor semántico a su vez es un método factory.
+
+````
+class Name
+{
+    public static function newAdmin(array $attributes)
+    {
+        $admin = newUser($attributes);
+        $admin->role = 'admin';
+
+        return $admin;
+    }
+}
+
+$adminName = className::newAdmin($attributtes);
+````
+````$adminName```` es un nuevo User y tiene el rol ````admin````.
+Con esto estas evitando tener que instanciar de la clase y asignarle un rol.
+
+* Las interfaces fluidas sirven para modificar el estado de un objeto(como un setter), lo único que se debe hacer es retornar ````this```` al finalizar el método.
+
+`````
+function setArmor(Armor $armor)
+{
+    this->armor = $armor;
+    return $this;
+}
+````
