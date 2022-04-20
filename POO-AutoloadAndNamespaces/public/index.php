@@ -33,6 +33,7 @@ spl_autoload_register(function($className)
 */
     
 $ramm = new Unity('Ramm', new Weapons\FireBow);
+$ramm->setArmor(new BronzeArmor());
 $camilo = new Unity('camilo', new Weapons\CrossBow);
 $ramm->setArmor(new GoldArmor());
 $camilo->attack($ramm);
