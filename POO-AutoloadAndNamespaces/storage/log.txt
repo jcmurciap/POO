@@ -1,0 +1,7 @@
+(2022-04-21 03:59:34) camilo dispara una flecha a Ramm
+(2022-04-21 03:59:34) Ramm ahora tiene 6.6666666666667 puntos de vida
+(2022-04-21 03:59:34) Ramm dispara una flecha de fuego a camilo
+(2022-04-21 03:59:34) camilo ahora tiene 20 puntos de vida
+(2022-04-21 03:59:34) Ramm dispara una flecha de fuego a camilo
+(2022-04-21 03:59:34) camilo ahora tiene 0 puntos de vida
+(2022-04-21 03:59:34) camilo muere

@@ -2,9 +2,9 @@
 
 namespace Juan;
 
-class HtmlLogger
+class HtmlLogger implements Logger
 {
-    public static function info($message)
+    public function info($message)
     {
         echo "<p>$message</p>";
     }
