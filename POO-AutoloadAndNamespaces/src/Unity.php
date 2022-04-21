@@ -35,13 +35,13 @@ class Unity
 
     public function move($direction)
     {
-        show("{$this->name} camina hacia $direction");
+        HtmlLogger::info("{$this->name} camina hacia $direction");
     }
 
     public function attack(Unity $opponent)
     {
         $attack = $this->weapon->createAttack(); // attack es de tipo Attack
-        show($attack->getDescription($this, $opponent)); //por ende puede acceder a getDescription()... 
+        HtmlLogger::info($attack->getDescription($this, $opponent)); //por ende puede acceder a getDescription()... 
 
         $opponent->takeDamage($attack);
     }
@@ -54,7 +54,7 @@ class Unity
     public function takeDamage(Attack $attack)
     {
         $this->hp = $this->hp - $this->armor->absorbDamage($attack);
-        show("{$this->name} ahora tiene {$this->hp} puntos de vida");
+        HtmlLogger::info("{$this->name} ahora tiene {$this->hp} puntos de vida");
 
         if($this->hp <= 0){
             $this->die();
@@ -63,7 +63,7 @@ class Unity
 
     public function die()
     {
-        show("{$this->name} muere");
+        HtmlLogger::info("{$this->name} muere");
         exit();
     }
 }
